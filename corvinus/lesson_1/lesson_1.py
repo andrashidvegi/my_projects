@@ -58,7 +58,7 @@ df = pd.DataFrame(data={'A': [34, 2, 'b'], 'B': [3, 1, 131]})
 #
 # # Data cleaning
 #
-df_prop = pd.read_csv('input/property data.csv')
+df_prop = pd.read_csv('../lesson_2/input/property data.csv')
 
 print(df_prop.loc[df_prop["ST_NAME"] == 'LEXINGTON'])
 msk = df_prop["ST_NAME"] == 'LEXINGTON'
