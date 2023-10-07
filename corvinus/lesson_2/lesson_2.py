@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 # https://www.kaggle.com/datasets/dgawlik/nyse
 
@@ -20,6 +20,13 @@ def add_effective_returns(df):
     df_out = pd.DataFrame()
     for col in df.columns:
         df_out[col + '_effective_return'] = df[col] / df[col].shift(1) - 1
+    return df_out
+
+
+def add_log_returns(df):
+    df_out = pd.DataFrame()
+    for col in df.columns:
+        df_out[col + '_log_return'] = np.log(df[col] / df[col].shift(1))
     return df_out
 
 df_prices_processed = process_prices(df_prices)
@@ -49,11 +56,11 @@ def find_splits():
 # find_splits()
 
 def find_highest_return_sector():
+    df_prices_adjusted_processed_with_returns = add_log_returns(df_prices_adjusted_processed)
     return_dicts = {}
-    for col in df_prices_adjusted_processed:
-        time_length = len(df_prices_adjusted_processed.loc[df_prices_adjusted_processed[col].notnull(), col]) / 255
-        stock_yearly_return = (df_prices_adjusted_processed[col].iloc[-1]
-                               / df_prices_adjusted_processed[col].iloc[0]) ** (1 / time_length) - 1
+    for col in df_prices_adjusted_processed_with_returns:
+        time_length = len(df_prices_adjusted_processed_with_returns.loc[df_prices_adjusted_processed_with_returns[col].notnull(), col]) / 255
+        stock_yearly_return = 255 
         return_dicts[col] = stock_yearly_return
     df_filtered_security = df_securities[['Ticker symbol', 'Security', 'GICS Sector']]
     df_filtered_security['yearly_returns'] = df_filtered_security['Ticker symbol'].map(return_dicts)
