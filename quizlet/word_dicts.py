@@ -1,6 +1,5 @@
 first_word_dict = {"dog": "kutya", "cat": "macska", "fish": "hal"}
 
-
 chinese_0928 = {'bachelor degree (t)': 'ben3ke1',
                 'master degree (t)': 'shuo4shi4',
                 'sequence, one by one (t)': 'ran3hou4',
@@ -65,4 +64,31 @@ chinese_0926 = {'chinese language (t)': 'han4yu3',
                 'to tutor (t)': 'fu2dao3',
                 'I just finished tutoring': 'wo gang gang fu dao wan',
                 'I tutored': 'wo fu dao le',
+                }
+
+chinese_1003 = {'cold (sickness) (t)': 'gan3mao4',
+                'running nose (t)': 'liu2 bi2ti',
+                'coughing (t)': 'ke2sou4',
+                'fever (t)': 'fa1shao1',
+                'temperature (t)': 'ti3wen1',
+                'normal (t)': 'zheng4chang2',
+                'have to (t)': 'yi2ding4',
+                'must (t)': 'bi4xu1',
+                'need (t)': 'xu1yao4',
+                'need (more polite, spoken) (t)': 'yong4',
+                'can - the ability to do something (t)': 'neng2',
+                'may, can - (very polite) (t)': 'ke3yi3',
+                'inherently know to do / will do something (t)': 'hui4',
+                'hobby (t)': 'ai4hao4',
+                'I finished the relationship with her': 'wo he tai de guan xi duan le',
+                'to know somebody well (t)': 'liao2jie3',
+                'to make an appointment (t)': 'yue1hao3',
+                "what's up?": 'ni you shenme shi ma?',
+                'to invite (t)': 'qing1',
+                'some (t)': 'yi4xie1',
+                'to hope, to wish (t)': 'xi1wang4',
+                'you first come to my house': 'ni xian lai wo jia',
+                'first (t)': 'xian1',
+                'then': 'hou',
+                'I finish my class, then I can help you': 'wo xian shangke, xia ke hou wo keyi ban ni',
                 }
