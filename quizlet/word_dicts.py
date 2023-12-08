@@ -271,4 +271,11 @@ china_trip_1 = {'interesting (t)': 'you3qu4',
                 'slippery (t)': 'hua2',
                 'homework (t)': 'zuo4ye4',
                 'after school (t)': 'fang4 xue2',
-                'towel': 'mao2jing1'}
+                'towel': 'mao2jing1',
+                'smoke': 'chou1yian1',
+                'secret': 'mi4mi3',
+                'teach': 'jiao1',
+                'put': 'fang4',
+                'in a hurry': 'gan3',
+                'change': 'huan4',
+                'win': 'ying2'}
