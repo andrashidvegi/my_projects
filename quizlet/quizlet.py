@@ -1,5 +1,6 @@
-from word_dicts import first_word_dict, chinese_0928
 from random import shuffle
+
+from word_dicts import chinese_1005
 
 
 def iterate_guesses(words_dict: dict, counter: int = 1):
@@ -28,4 +29,4 @@ def iterate_guesses(words_dict: dict, counter: int = 1):
         print("Congratulations! You successfully learnt the module.")
 
 
-iterate_guesses(first_word_dict)
+iterate_guesses(chinese_1005)
