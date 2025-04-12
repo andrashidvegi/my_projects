@@ -1,12 +1,12 @@
 from random import shuffle
 
-from word_dicts import chinese_1005
+from word_dicts import chinese_0410
 
 
 def iterate_guesses(words_dict: dict, counter: int = 1):
     dict_items = list(words_dict.items())
     shuffle(dict_items)
-    print(f"Round {counter}")
+    print(f"Round {counter}, number of words: {len(words_dict.keys())}")
     guessed_wrong = {}
     for key, value in dict_items:
         print(key)
@@ -26,7 +26,7 @@ def iterate_guesses(words_dict: dict, counter: int = 1):
         print(f"Total this round: {total_this_round} guessed: {total_guessed}")
         iterate_guesses(guessed_wrong, counter)
     else:
-        print("Congratulations! You successfully learnt the module.")
+        print(f"Congratulations! You successfully learnt the module in {counter} rounds.")
 
 
-iterate_guesses(chinese_1005)
+iterate_guesses(chinese_0410)
